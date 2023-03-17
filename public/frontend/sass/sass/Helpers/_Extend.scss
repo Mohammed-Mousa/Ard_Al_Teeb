@@ -1,0 +1,162 @@
+%border {
+	border-left: 1px solid white;
+	border-right: 0.5px solid rgba(white, 0.2);
+	&::before,
+	&::after {
+		content: "";
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		background: linear-gradient(to right, white, rgba(white, 0.2));
+		bottom: 0px;
+		left: 0px;
+	}
+	&::before {
+		top: 0px;
+		bottom: initial;
+	}
+}
+@mixin lineAfter {
+	position: relative;
+	&:after {
+		content: "";
+		height: 90%;
+		width: 1px;
+		position: absolute;
+		background: $wh;
+		top: 5%;
+		left: 0px;
+	}
+}
+@mixin lineBefore {
+	position: relative;
+	&:before {
+		content: "";
+		height: 90%;
+		width: 1px;
+		position: absolute;
+		background: $wh;
+		top: 5%;
+		right: 0px;
+	}
+}
+
+
+.row.row-of-products {
+	> div {
+		// border: 2px solid red;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 60px;
+			margin-top: 60px;
+		}
+		@media screen and (min-width: 1200px) {
+			margin-bottom: 90px;
+			margin-top: 90px;
+		}
+		.product {
+			display: flex;
+			width: 223px;
+			height: 230px;
+
+			margin: auto;
+			position: relative;
+			border-radius: 8px;
+			overflow: hidden;
+			justify-content: flex-start;
+			align-items: flex-end;
+
+			padding: 2.5% 0px;
+
+			@extend %border;
+	
+			&:focus ,
+			&:active ,
+			&:hover {
+				.main {
+					margin-right: 0%;
+
+					transform: scale(0);
+					transform-origin: center 80%;
+					// width: 0px;
+				}
+				.small {
+					// right:2.5%;
+					left: 95%;
+					transform: translateX(-100%);
+
+					margin-left: 0%;
+
+					margin-right: 0%;
+				}
+				.txt {
+					opacity: 1;
+					// position: relative;
+					display: block;
+				}
+			}
+
+			img {
+				height: auto;
+				transition: 0.5s all linear;
+			}
+			.main {
+				width: 55%;
+				margin-right: 2.5%;
+			}
+
+			.small {
+				width: 35%;
+
+				position: absolute;
+				left: 2.5%;
+
+				z-index: 3;
+			}
+
+			.txt {
+				transition: 0.25s all linear;
+				width: 55%;
+				opacity: 0;
+				z-index: 1;
+				position: absolute;
+				left: 2%;
+				top: 50%;
+				// transform: translateY(-50%) 	;
+
+				span {
+					font-family: $kufi;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 12px;
+
+					text-align: center;
+					display: inline-block;
+					margin: auto;
+
+					/* Cards */
+
+					color: $wh;
+				}
+				button {
+					/* Cards */
+
+					background: $wh;
+					border-radius: 4px;
+					font-family: $kufi;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 23px;
+					width: 98%;
+					margin: 12px auto 0px;
+
+					/* Primary */
+
+					color: #050505;
+				}
+			}
+		}
+	}
+}

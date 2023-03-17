@@ -1,0 +1,24 @@
+@import "sass/Lang/Ar";
+@import "sass/Mode/Default";
+
+@import "sass/Helpers/Variables";
+@import "sass/Layout/Fonts";
+@import "sass/Helpers/Mixins";
+@import "sass/Helpers/Extend";
+@import "sass/Helpers/Functions";
+
+@import "sass/Layout/Cover";
+@import "sass/Layout/Grid";
+@import "sass/Layout/Scroll";
+@import "sass/Layout/UpArrow";
+
+@import "sass/Layout/Style4AllElement";
+
+@import "sass/Components/Button";
+
+@import "sass/Layout/Nav";
+@import "sass/Pages/Perfume";
+@import "sass/Layout/Footer";
+
+//sass --watch L:\Ard_Al_Teeb\public\frontend\sass:L:\Ard_Al_Teeb\public\frontend\css
+//sass --watch L:\Ard_Al_Teeb\public\frontend\sass:L:\Ard_Al_Teeb\public\frontend\css --style compressed

@@ -1,0 +1,338 @@
+.slider {
+	.item {
+		height: 100vh;
+		width: auto;
+
+		.center-contain {
+			position: absolute;
+			color: white;
+			// border: 2px solid red;
+
+			@media screen and (max-width: 767px) {
+				top: 50%;
+				text-align: center;
+				right: 50%;
+				transform: translateY(-50%) translateX(50%);
+				width: 100%;
+			}
+			@media screen and (min-width: 768px) {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			h2 {
+				font-family: $kufi;
+				font-style: normal;
+				font-weight: 700;
+
+				color: #ffffff;
+
+				@media screen and (max-width: 767px) {
+					text-align: center;
+					font-size: 32px;
+					line-height: 55px;
+				}
+				@media screen and (min-width: 768px) {
+					text-align: right;
+					font-size: 40px;
+					line-height: 70px;
+				}
+			}
+
+			.main-btn {
+				display: inline-block;
+
+				font-family: $kufi;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+
+				background: #d9d9d9;
+				border-radius: 5px;
+				padding: 11px 15px;
+				text-align: right;
+				margin-top: 21px;
+				color: #030403;
+			}
+		}
+		.copyright {
+			direction: ltr;
+
+			position: absolute;
+			bottom: 35px;
+
+			font-family: $Montserrat;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 83.2%;
+
+			color: $wh;
+		}
+
+		.social-media {
+			@media screen and (max-width: 1199px) {
+				position: absolute;
+				bottom: 100px;
+				right: 50%;
+				transform: translateX(50%);
+
+				// border:2px solid red;
+				height: 30px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+
+			@media screen and (min-width: 1200px) {
+				position: absolute;
+				bottom: 30px;
+				left: 70px;
+				// border:2px solid red;
+				height: 30px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+
+			a {
+				display: inline-block;
+				margin-right: 10px;
+				margin-left: 10px;
+				@media screen and (min-width: 768px) {
+					margin-right: 10px;
+					margin-left: 10px;
+				}
+
+				@media screen and (min-width: 1200px) {
+					margin-right: 19px;
+					margin-left: 0px;
+				}
+			}
+		}
+	}
+	.first-slider {
+		@media screen and (max-width: 1199px) {
+			background: url("../img/11 1.png"), linear-gradient(rgba(29, 18, 18, 0.65), rgba(0, 0, 0, 0.65));
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0px;
+			background-blend-mode: multiply;
+			animation-name: none;
+		}
+		@media screen and (min-width: 1200px) {
+			background-size: cover;
+			background-image: url("../img/11 1.png");
+			background-position: 00px;
+		}
+	}
+
+	.owl-dots {
+		// border: 2px solid red;
+		// width: 100%;
+		/* margin-top: -138px; */
+		position: absolute;
+		bottom: 35px;
+		right: 50%;
+		transform: translateX(50%);
+
+		text-align: center;
+		button {
+			border: 0.5px solid $wh;
+
+			border-radius: 50%;
+			margin: 0px 5px 3px;
+			width: 10px;
+			height: 10px;
+			padding: 3px !important;
+
+			@media screen and (min-width: 768px) {
+				// width: 15px;
+				// height: 15px;
+				padding: 3px !important;
+			}
+		}
+		button.active {
+			background-color: $wh;
+		}
+	}
+}
+main {
+	position: relative;
+	background-color: black;
+	.figcaption {
+		text-align: center;
+		// border: 2px solid red;
+		padding: 30px 0px 0px;
+		@media screen and (min-width: 768px) {
+			padding: 0px 0px;
+			position: absolute;
+			width: 100%;
+			margin: 30px auto 0px;
+		}
+		@media screen and (min-width: 1200px) {
+			position: absolute;
+			width: 100%;
+			margin: 70px auto 0px;
+		}
+
+		h1 {
+			font-family: $kufi;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 26px;
+			@media screen and (min-width: 768px) {
+				font-size: 30px;
+			}
+			color: $wh;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+}
+.products {
+	text-align: center;
+	// border: 2px solid red;
+	min-height: 100vh;
+	// background: url("../img/t.png"), linear-gradient(to bottom ,rgba(black, 1), rgba(black 0));
+	background: url("../img/t.png"), linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+	background-position: 0px;
+	background-blend-mode: multiply;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	h2 {
+		color: $wh;
+		font-family: $kufi;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 26px;
+		margin-top: 50px;
+		@media screen and (min-width: 768px) {
+			margin-top: 70px;
+			font-size: 30px;
+		}
+		@media screen and (min-width: 1200px) {
+			margin-top: 120px;
+		}
+	}
+	.row.row-of-products {
+		> div {
+			// border: 2px solid red;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 90px;
+				margin-top: 90px;
+			}
+			.product {
+				display: flex;
+				width: 223px;
+				height: 230px;
+
+				margin: auto;
+				position: relative;
+				border-radius: 8px;
+				overflow: hidden;
+				justify-content: flex-start;
+				align-items: flex-end;
+
+				padding: 2.5% 0px;
+
+				@extend %border;
+		
+				&:focus ,
+				&:active ,
+				&:hover {
+					.main {
+						margin-right: 0%;
+
+						transform: scale(0);
+						transform-origin: center 80%;
+						// width: 0px;
+					}
+					.small {
+						// right:2.5%;
+						left: 95%;
+						transform: translateX(-100%);
+
+						margin-left: 0%;
+
+						margin-right: 0%;
+					}
+					.txt {
+						opacity: 1;
+						// position: relative;
+						display: block;
+					}
+				}
+
+				img {
+					height: auto;
+					transition: 0.5s all linear;
+				}
+				.main {
+					width: 55%;
+					margin-right: 2.5%;
+				}
+
+				.small {
+					width: 35%;
+
+					position: absolute;
+					left: 2.5%;
+
+					z-index: 3;
+				}
+
+				.txt {
+					transition: 0.25s all linear;
+					width: 55%;
+					opacity: 0;
+					z-index: 1;
+					position: absolute;
+					left: 2%;
+					top: 50%;
+					// transform: translateY(-50%) 	;
+
+					span {
+						font-family: $kufi;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 12px;
+
+						text-align: center;
+						display: inline-block;
+						margin: auto;
+
+						/* Cards */
+
+						color: $wh;
+					}
+					button {
+						/* Cards */
+
+						background: $wh;
+						border-radius: 4px;
+						font-family: $kufi;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 23px;
+						width: 98%;
+						margin: 12px auto 0px;
+
+						/* Primary */
+
+						color: #050505;
+					}
+				}
+			}
+		}
+	}
+}

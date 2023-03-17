@@ -1,0 +1,279 @@
+.product-details {
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: center;
+	flex-direction: column;
+
+	background: url("../img/t.png"), linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+	background-position: 0px;
+	background-blend-mode: multiply;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	padding-top: 50px;
+
+	@media screen and (min-width: 768px) {
+		padding-top: 100px;
+	}
+	.row {
+		// min-height: 60vh;
+		display: flex;
+		justify-content: center;
+
+		.details {
+			@media screen and (max-width: 767px) {
+				order: 3;
+				padding: 30px 15px;
+			}
+
+			h1 {
+				color: $wh;
+				font-family: $kufi;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 46px;
+			}
+			p {
+				color: $sc;
+				font-family: $kufi;
+				font-style: normal;
+
+				font-size: 16px;
+				line-height: 30px;
+			}
+			p.alert-g {
+				font-family: $kufi;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 23px;
+
+				color: #858585;
+
+				@media screen and (min-width: 1200px) {
+					margin-top: 90px;
+				}
+			}
+		}
+
+		.add-to-cart {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			@media screen and (max-width: 767px) {
+				order: 5;
+				padding: 20px 0px;
+			}
+
+			@media screen and (min-width: 768px) and (max-width: 1199px) {
+				order: 5;
+				padding: 50px 0px;
+			}
+
+			.price {
+				.num {
+					font-family: $kufi;
+					font-style: normal;
+					font-weight: 700;
+					font-size: 64px;
+					line-height: 48px;
+
+					/* Cards */
+
+					color: $wh;
+				}
+				.currency {
+					font-family: $kufi;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 48px;
+					color: #eaeef2;
+				}
+			}
+			form {
+				margin-top: 25px;
+				@media screen and (min-width: 768px) {
+					margin-top: 50px;
+				}
+				label {
+					overflow: hidden;
+					background: rgba(2, 2, 2, 0.05);
+					color: white;
+					position: relative;
+					border-radius: 8px;
+
+					width: 73px;
+					height: 35px;
+
+					display: inline-flex;
+					justify-content: space-evenly;
+					align-items: center;
+					margin-left: 16px;
+
+					border-left: 1px solid white;
+
+					border-right: 1px solid rgba(white, 0.2);
+					&::before,
+					&::after {
+						content: "";
+						height: 1px;
+						width: 88%;
+						position: absolute;
+						background: linear-gradient(to right, white, rgba(white, 0.2));
+						bottom: 0px;
+						left: 6%;
+					}
+					&::before {
+						top: 0px;
+						bottom: initial;
+					}
+
+					.n {
+						font-family: $kufi;
+						font-style: normal;
+						font-weight: 700;
+						font-size: 16px;
+						line-height: 19px;
+					}
+
+					.plus,
+					.minus {
+						cursor: pointer;
+
+						&::selection {
+							background: transparent;
+						}
+					}
+				}
+				input[type="submit"] {
+					font-family: $kufi;
+					font-style: normal;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 19px;
+					height: 35px;
+
+					/* Primary */
+
+					color: #050505;
+
+					background: #ffffff;
+					border-radius: 5px;
+					padding: 5px 40px;
+					@media screen and (min-width: 768px) {
+						padding: 8px 60px;
+					}
+				}
+			}
+		}
+
+		.product-imgs {
+			margin-top: -30px !important;
+			@media screen and (max-width: 767px) {
+				order: 1;
+				padding: 0px;
+			}
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+
+			.img-con {
+				height: 340px;
+				width: 200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.main-img {
+					min-width: 165px;
+					height: auto;
+				}
+			}
+
+			.other-img {
+				figure {
+					cursor: pointer;
+					position: relative;
+					@extend %border;
+
+					width: 65px;
+					height: 65px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					align-content: center;
+					border-radius: 4px;
+					&:nth-child(2) {
+						margin-left: 20px;
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+.related-products {
+	padding: 50px 0px 0px 0px;
+
+	@media screen and (min-width: 768px) {
+		padding: 100px 0px 0px 0px;
+	}
+	h2 {
+		font-family: $kufi;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 46px;
+
+		text-align: right;
+
+		/* Cards */
+
+		color: $wh;
+	}
+
+	.row-of-products{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: center;
+
+		.btns{
+			display: flex;;
+		}
+	}
+}
+
+.arrow{
+	position: absolute;
+
+	
+
+
+	left: 5px;
+	top: 20px;
+	@media screen and (min-width: 768px) {
+		left: 20px;
+		top: 50px;
+	}
+	@media screen and (min-width: 1200px) {
+		left: 50px;
+		top:80px;
+	}
+	@media screen and (min-width: 1400px) {
+		left: 70px;
+		top: 100px;
+	}
+
+
+}

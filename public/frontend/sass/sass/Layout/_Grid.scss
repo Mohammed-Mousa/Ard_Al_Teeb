@@ -1,0 +1,33 @@
+/* ******************* */
+/*        Grid         */
+/* ******************* */
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	position: relative;
+	overflow-x:hidden;
+}
+#body{
+	overflow-x: hidden;
+	// border:0px solid red;
+}
+.container-fluid {
+
+	// border:2px solid red;
+	padding: 0px 5px;
+	@media screen and (min-width: 768px) {
+		padding: 0px 20px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding: 0px 50px;
+	}
+	@media screen and (min-width: 1400px) {
+		padding: 0px 70px;
+	}
+}
+body{
+	// min-height: 200vh;
+	background-color: black;
+}
